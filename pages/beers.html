@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <body>
+        <h1>Beers</h1>
+        <ul> 
+        </ul>
+    </body>
+    <script>
+    
+        fetch('http://20.223.73.113/beers/')
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                data.forEach(beer => {
+                    const markup = `<li>${beer.name}</li>`;
+                    document.querySelector('ul').insertAdjacentHTML('beforeend',markup);
+
+                })
+            })
+            .catch(error => console.log(error))
+    </script>
+</html>
