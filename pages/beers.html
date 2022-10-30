@@ -15,7 +15,7 @@
             })
             .then(data => {
                 data.forEach(beer => {
-                    const markup = `<li>${beer.name},${beer.brewer},${beer.strength}</li>`;
+                    const markup = `<li><b>Name:</b>${beer.name}, <b>Brewer:</b> ${beer.brewer}, <b>Strength:</b> ${beer.strength}</li>`;
                     document.querySelector('ul').insertAdjacentHTML('beforeend',markup);
 
                 })
