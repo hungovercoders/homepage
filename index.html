@@ -1,5 +1,11 @@
 <head>
 <link rel="stylesheet" href="styles/style01.css">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push({
+    'event': 'Pageview'
+   });
+  </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -22,6 +28,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <li><a href="pages/test.html">Test</a></li>
   <li><a href="pages/beers.html">Beers</a></li>
+
+  <h2>Breweries</h2>
+  <button onclick="dataLayer.push({'brewery': 'Tiny Rebel'});">Tiny Rebel</button>
+  <button onclick="dataLayer.push({'brewery': 'Crafty Devil'});">Crafty Devil</button>
 
 <iframe src="https://www.hungovercoders.com/blog/" width="100%" height="500">
 </iframe>
