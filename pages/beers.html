@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
+    <title>Beers</title>
 
 
-        <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P74Q3WN');</script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P74Q3WN');</script>
     <!-- End Google Tag Manager -->
-    </head>
+</head>
 
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P74Q3WN"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P74Q3WN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-        <h1>Beers</h1>
-        <ul> 
-        </ul>
-    </body>
-    <script>
-    
-        fetch('https://dv-beerapi-webapp-eun-dgrf.azurewebsites.net/beers/')
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                data.forEach(beer => {
-                    const markup = `<li><b>Name:</b>${beer.name}, <b>Brewer:</b> ${beer.brewer}, <b>Strength:</b> ${beer.strength}</li>`;
-                    document.querySelector('ul').insertAdjacentHTML('beforeend',markup);
+    <h1>Beers</h1>
+    <ul>
+    </ul>
+</body>
+<script>
 
-                })
+    fetch('https://dv-beerapi-webapp-eun-dgrf.azurewebsites.net/beers/')
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            data.forEach(beer => {
+                const markup = `<li><b>Name:</b>${beer.name}, <b>Brewer:</b> ${beer.brewer}, <b>Strength:</b> ${beer.strength}</li>`;
+                document.querySelector('ul').insertAdjacentHTML('beforeend', markup);
+
             })
-            .catch(error => console.log(error))
-    </script>
+        })
+        .catch(error => console.log(error))
+</script>
+
 </html>
