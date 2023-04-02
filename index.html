@@ -1,6 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <title>Home</title>
-  <link rel="stylesheet" href="styles/style01.css">
   <script>
     window.dataLayer = window.dataLayer || [];
   </script>
@@ -14,6 +15,11 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5RJBJWL');</script>
   <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/style01.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" /> -->
+  <title>Home</title>
 </head>
 
 <body>
@@ -21,20 +27,61 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RJBJWL" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <div class="header">
-    <img src="assets/logo.png" alt="logo" />
-    <h1>Hungovercoders</h1>
+
+
+  <div class="container">
+    <div class="header">
+      <img src="assets/logo3.ico" alt="logo" />
+    </div>
+    <h3>Hungovercoders</h3>
+
+    <div class="cards">
+      <div class="cards-inner">
+        <a href="https://www.hungovercoders.com/blog">
+          <div>
+            <h4>Technology</h4>
+            <small>Blog</small>
+            <p>
+              Catchup with all the latest tech blogging from the Hungovercoders
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="cards-inner">
+        <a href="https://www.hungovercoders.com/breweries">
+          <div>
+            <h4>Beer</h4>
+            <small>Breweries</small>
+            <p>
+              Catchup with all the latest breweries from the Hungovercoders
+            </p>
+          </div>
+        </a>
+      </div>
+      <!-- <div class="cards-inner">
+        <a href="https://www.hungovercoders.com/whiskeys">
+          <div>
+            <h4>Spirits</h4>
+            <small>Whiskeys</small>
+            <p>
+              Catchup with all the latest whiskeys from the Hungovercoders
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="cards-inner">
+        <a href="https://www.hungovercoders.com/beers">
+          <div>
+            <h4>Beer</h4>
+            <small>Beers</small>
+            <p>
+              Catchup with all the latest beers from the Hungovercoders
+            </p>
+          </div>
+        </a>
+      </div> -->
+    </div>
   </div>
-
-  <li><a href="pages/test.html">Test</a></li>
-  <li><a href="pages/beers.html">Beers</a></li>
-  <li><a href="breweries">Breweries</a></li>
-
-  <h2>Breweries</h2>
-  <button onclick="window.dataLayer.push({'brewery': 'Tiny Rebel'});">Tiny Rebel</button>
-  <button onclick="window.dataLayer.push({'brewery': 'Crafty Devil'});">Crafty Devil</button>
-
-  <iframe src="https://www.hungovercoders.com/blog/" width="100%" height="500">
-  </iframe>
-
 </body>
+
+</html>

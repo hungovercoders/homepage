@@ -1,12 +1,89 @@
 .header img {
-    float: left;
-    width: 100px;
-    height: 100px;
-    background: #555;
+  float: left;
+  width: 150px;
+  height: auto;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: #0e1238;
+}
+
+body {
+  font-family: 'Roboto Slab', sans-serif;
+  background-color: #fafcfd;
+  color: #0e1238;
+}
+
+main {
+  text-align: center;
+}
+
+main h1 {
+  padding: 30px 20px 20px;
+  font-size: 24px;
+}
+
+.container h3 {
+  padding: 0 0 30px 30px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 0 30px 50px;
+}
+
+.cards .cards-inner {
+  display: flex;
+  background-color: #d1d2d3;
+  padding: 20px;
+  border-radius: 5px;
+  transition: box-shadow 0.4s;
+}
+
+.cards .cards-inner:hover {
+  box-shadow: 0 5px 20px rgba(1, 45, 128, 0.5);
+}
+
+.cards .cards-inner div i {
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.cards .cards-inner div p {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+@media (min-width: 600px) {
+  main h1 {
+    max-width: 500px;
+    margin: auto;
   }
-  
-  .header h1 {
-    position: relative;
-    top: 18px;
-    left: 10px;
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (min-width: 912px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+    margin: auto;
+  }
+}
